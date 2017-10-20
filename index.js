@@ -28,34 +28,35 @@ function viewCart() {
   if (cart.length === 0) {
     console.log("Your shopping cart is empty.")
   }
-  else if (cart.length === 1) {
-    console.log(`In your cart, you have ${Object.keys(cart[0])} at $${cart[0][Object.keys(cart[0])]}.`)
-    cartContents = []
-  }
-  else if (cart.length === 2) {
-    for (var i = 0; i < cart.length; i++) {
-      if (i === cart.length-1) {
-        cartContents.push(`and ${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}.`)
-      }
-      else {
-        cartContents.push(`In your cart, you have ${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}`)
-      }
-      console.log(...cartContents)
+  else {
+
+    if (cart.length === 1) {
+      console.log(`In your cart, you have ${Object.keys(cart[0])} at $${cart[0][Object.keys(cart[0])]}.`)
       cartContents = []
     }
-  }
-  else {
-    cartContents.push("In your cart, you have")
-    for (var i = 0; i < cart.length; i++) {
-      if (i === cart.length-1) {
-        cartContents.push(`and ${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}.`)
+    else if (cart.length === 2) {
+      for (var i = 0; i < cart.length; i++) {
+        if (i === cart.length-1) {
+          cartContents.push(`and ${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}.`)
+        }
+        else {
+          cartContents.push(`In your cart, you have ${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}`)
+        }
+        console.log(...cartContents)
       }
-      else {
-        cartContents.push(`${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]},`)
-      }
-      console.log(...cartContents)
     }
-  }
+    else {
+      cartContents.push("In your cart, you have");
+      for (var i = 0; i < cart.length; i++) {
+        if (i === cart.length-1) {
+          cartContents.push(`and ${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}.`)
+        }
+        else {
+          cartContents.push(`${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]},`)
+        }
+        console.log(...cartContents)
+      }
+    }
   cartContents = []
 }
 
