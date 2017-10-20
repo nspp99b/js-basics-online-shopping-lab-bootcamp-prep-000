@@ -48,7 +48,7 @@ function viewCart() {
     else {
       cartContents.push("In your cart, you have");
       for (var i = 0; i < cart.length; i++) {
-        if (i === cart.length-1) {
+        if (i === cart.length -1) {
           cartContents.push(`and ${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}.`)
         }
         else {
