@@ -57,6 +57,7 @@ function viewCart() {
       }
       console.log(...cartContents);
     }
+  }
   cartContents = []
 }
 
