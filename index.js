@@ -41,6 +41,7 @@ function viewCart() {
         cartContents.push(`In your cart, you have ${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}`)
       }
       console.log(...cartContents)
+      cartContents = []
     }
   }
   else {
@@ -53,7 +54,7 @@ function viewCart() {
         cartContents.push(`${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]},`)
       }
       console.log(...cartContents)
-    }    
+    }
   }
   cartContents = []
 }
