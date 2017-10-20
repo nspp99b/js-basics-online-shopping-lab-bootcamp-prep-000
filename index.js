@@ -45,7 +45,7 @@ function viewCart() {
           cartContents.push(` ${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}`)
         }
       }
-      console.log(`cartMessage +${cartContents}`);
+      console.log(`${cartMessage} + ${cartContents}`);
     }
   }
   cartContents = []
