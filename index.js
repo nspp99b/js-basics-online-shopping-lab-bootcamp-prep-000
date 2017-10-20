@@ -40,7 +40,7 @@ function viewCart() {
         cartContents.push(`In your cart, you have ${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}`)
       }
       console.log(...cartContents)
-    }    
+    }
   }
   else {
     cartContents.push("In your cart, you have")
