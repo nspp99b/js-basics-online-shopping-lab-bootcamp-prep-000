@@ -36,7 +36,7 @@ function viewCart() {
       console.log(`In your cart, you have ${Object.keys(cart[0])} at $${cart[0][Object.keys(cart[0])]} and ${Object.keys(cart[1])} at $${cart[1][Object.keys(cart[1])]}.`);
     }
     else {
-      cartContents.push("In your cart, you have");
+      var cartMessage = "In your cart, you have";
       for (var i = 0; i < cart.length; i++) {
         if (i === cart.length -1) {
           cartContents.push(` and ${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}.`)
@@ -45,7 +45,7 @@ function viewCart() {
           cartContents.push(` ${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}`)
         }
       }
-      console.log(`${cartContents}`);
+      console.log(`cartMessage +${cartContents}`);
     }
   }
   cartContents = []
